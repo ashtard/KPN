@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# SQLite database (local only, don’t track in Git)
+*.db
+
+# Environment files
+.env
+.env.*
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage
+htmlcov/
+.coverage
