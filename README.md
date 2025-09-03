@@ -70,4 +70,14 @@ Two tiny, dependency-free helpers are exposed under `/ai`:
 These are rule-based and fast; you can later replace them with a model or external API.
 
 ## AI usage log
-List any prompts or tools you used to assist during implementation.
+This project was developed with occasional assistance from ChatGPT.  
+AI was used in the following ways:
+
+- Debugging Pydantic v2 migration issues (e.g., replacing `Config` with `ConfigDict`).  
+- Suggesting fixes for serialization errors (e.g., handling `datetime` fields).  
+- Helping polish project structure (e.g., separating `routers`, `crud`, `schemas`, and `util`).  
+- Writing clear error responses and consistent `responses={}` metadata in routers.  
+- Drafting README structure and usage examples.  
+- Adding optional lightweight AI helper endpoints (`/ai/sentiment`, `/ai/subject`) with tests.  
+
+All code was reviewed, tested, and adapted manually before inclusion.
