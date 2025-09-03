@@ -78,6 +78,6 @@ AI was used in the following ways:
 - Helping polish project structure (e.g., separating `routers`, `crud`, `schemas`, and `util`).  
 - Writing clear error responses and consistent `responses={}` metadata in routers.  
 - Drafting README structure and usage examples.  
-- Adding optional lightweight AI helper endpoints (`/ai/sentiment`, `/ai/subject`) with tests.  
+- Helping with optional lightweight AI helper endpoints (`/ai/sentiment`, `/ai/subject`) with tests.  
 
 All code was reviewed, tested, and adapted manually before inclusion.
