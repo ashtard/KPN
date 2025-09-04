@@ -11,7 +11,7 @@ from app.db import get_db
 router = APIRouter(prefix="/customers", tags=["customers"])
 
 
-# ---------- LIST / SEARCH ----------
+# LIST / SEARCH 
 @router.get("/", response_model=List[schemas.CustomerRead])
 def list_customers(
     query: Optional[str] = Query(None, description="Case-insensitive search over name and email"),
@@ -31,7 +31,7 @@ def list_customers(
     return items
 
 
-# ---------- RETRIEVE ----------
+# RETRIEVE
 @router.get(
     "/{customer_id}",
     response_model=schemas.CustomerRead,
@@ -44,7 +44,7 @@ def get_customer(customer_id: int, db: Session = Depends(get_db)):
     return obj
 
 
-# ---------- CREATE ----------
+# CREATE
 @router.post(
     "/",
     response_model=schemas.CustomerRead,
@@ -61,7 +61,7 @@ def create_customer(payload: schemas.CustomerCreate, db: Session = Depends(get_d
     return crud.create_customer(db, payload)
 
 
-# ---------- UPDATE (partial) ----------
+# UPDATE (partial) 
 @router.patch(
     "/{customer_id}",
     response_model=schemas.CustomerRead,
@@ -89,7 +89,7 @@ def update_customer(customer_id: int, payload: schemas.CustomerUpdate, db: Sessi
     return crud.update_customer(db, obj, payload)
 
 
-# ---------- DELETE ----------
+# DELETE 
 @router.delete(
     "/{customer_id}",
     status_code=status.HTTP_204_NO_CONTENT,
